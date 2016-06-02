@@ -12,6 +12,9 @@ require('style!css!foundation-sites/dist/foundation.min.css');
 // Start foundation
 $(document).foundation();
 
+// Load Custom Style Sheet (app.css)
+require('style!css!applicationStyles');
+
 ReactDOM.render(
   <Router history={ hashHistory }>
     <Route path="/" component={ Main }>

@@ -16,6 +16,7 @@ app.use(express.static('public'));
 
 // Port:
 const PORT = process.env.PORT;
+console.log('process.env.API_KEY: ', process.env.API_KEY);
 
 // Starting server:
 app.listen(PORT, function (err) {

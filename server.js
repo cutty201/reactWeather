@@ -19,13 +19,13 @@ app.use('/', cors());
 
 // Config Variables:
 const PORT = process.env.PORT || 3000;
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.API_KEY || '116e7c0519459752c4ba8b14fed3d28a';
 
 // OpenWeatherMap API URL
 const OPEN_WEATHER_MAP_URL = `http://api.openweathermap.org/data/2.5/weather?appid=${API_KEY}&units=metric`;
 
 // API:
-app.get('/forecast/:location', function(req, res) {
+app.get('/api/forecast/:location', function(req, res) {
 	var location = req.params.location;
   var encodedLocation = encodeURIComponent(location);
   var requestUrl = `${OPEN_WEATHER_MAP_URL}&q=${encodedLocation}`;
